@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sistema, qualità e certificazione</title>
+  <style>
+    :root{
+      --bg:#f4f7fb;
+      --card:#ffffff;
+      --text:#1f2a37;
+      --muted:#5b6675;
+      --accent:#2f6fed;
+      --accent2:#eaf1ff;
+      --border:#d8e1f0;
+      --shadow:0 8px 24px rgba(31,42,55,.08);
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Arial, Helvetica, sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.6;
+    }
+    .wrap{
+      max-width:1000px;
+      margin:0 auto;
+      padding:24px 16px 48px;
+    }
+    .hero{
+      background:linear-gradient(135deg, #ffffff, #eef4ff);
+      border:1px solid var(--border);
+      border-radius:22px;
+      padding:28px;
+      box-shadow:var(--shadow);
+      margin-bottom:22px;
+    }
+    h1{
+      margin:0 0 8px;
+      font-size:2rem;
+    }
+    .subtitle{
+      margin:0;
+      color:var(--muted);
+      font-size:1.05rem;
+    }
+    .section{
+      background:var(--card);
+      border:1px solid var(--border);
+      border-radius:18px;
+      padding:22px;
+      box-shadow:var(--shadow);
+      margin-bottom:18px;
+    }
+    h2{
+      margin-top:0;
+      font-size:1.35rem;
+      color:var(--accent);
+    }
+    ul,ol{padding-left:22px}
+    .summary{
+      background:var(--accent2);
+      border-left:5px solid var(--accent);
+      padding:14px 16px;
+      border-radius:12px;
+      margin-top:12px;
+    }
+    .flashcards-title{
+      margin-top:28px;
+    }
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));
+      gap:18px;
+    }
+    .flashcard{
+      perspective:1000px;
+      min-height:190px;
+    }
+    .flashcard-inner{
+      position:relative;
+      width:100%;
+      height:190px;
+      transition:transform .7s;
+      transform-style:preserve-3d;
+      cursor:pointer;
+    }
+    .flashcard.flipped .flashcard-inner{
+      transform:rotateY(180deg);
+    }
+    .face{
+      position:absolute;
+      inset:0;
+      backface-visibility:hidden;
+      background:#fff;
+      border:1px solid var(--border);
+      border-radius:18px;
+      box-shadow:var(--shadow);
+      padding:18px;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+    }
+    .front{
+      background:linear-gradient(180deg,#ffffff,#f2f7ff);
+    }
+    .back{
+      transform:rotateY(180deg);
+      background:linear-gradient(180deg,#eef4ff,#ffffff);
+    }
+    .tag{
+      display:inline-block;
+      background:var(--accent2);
+      color:var(--accent);
+      padding:5px 10px;
+      border-radius:999px;
+      font-size:.85rem;
+      margin-bottom:10px;
+      font-weight:bold;
+    }
+    .small{
+      color:var(--muted);
+      font-size:.92rem;
+      margin-top:8px;
+    }
+    .legend{
+      text-align:center;
+      color:var(--muted);
+      margin:6px 0 18px;
+    }
+    .footer-note{
+      text-align:center;
+      margin-top:26px;
+      color:var(--muted);
+      font-size:.95rem;
+    }
+    @media (max-width:600px){
+      h1{font-size:1.6rem}
+      .section,.hero{padding:18px}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="hero">
+      <h1>Sistema, qualità e certificazione</h1>
+      <p class="subtitle">Scheda semplificata con testo di studio e flashcard finali.</p>
+    </section>
+
+    <section class="section">
+      <h2>Il sistema</h2>
+      <p>Un <strong>sistema</strong> è formato da parti diverse. Queste parti si chiamano <strong>fattori</strong>.</p>
+      <p>I fattori sono collegati tra loro e dipendono l’uno dall’altro. Se un fattore non funziona bene, tutto il sistema può avere problemi.</p>
+      <p>Un sistema può essere <strong>pubblico</strong> o <strong>privato</strong>. Può essere <strong>nazionale</strong> o <strong>locale</strong>.</p>
+      <p>Il sistema serve per organizzare il personale e per gestire beni e servizi. Nel caso delle strutture che studiamo, il sistema deve rispondere ai bisogni della collettività.</p>
+    </section>
+
+    <section class="section">
+      <h2>La qualità</h2>
+      <p>La <strong>qualità</strong> è la capacità di un sistema di soddisfare i bisogni e le aspettative di tutti gli attori coinvolti.</p>
+      <p>Per esempio, in un sistema sanitario bisogna considerare i bisogni e le aspettative di:</p>
+      <ul>
+        <li>pazienti</li>
+        <li>medici</li>
+        <li>infermieri</li>
+      </ul>
+      <p>Un sistema di qualità deve avere quattro caratteristiche:</p>
+      <ol>
+        <li><strong>Efficacia</strong>: raggiunge gli obiettivi.</li>
+        <li><strong>Efficienza</strong>: usa bene le risorse.</li>
+        <li><strong>Sostenibilità sociale</strong>: rispetta le persone.</li>
+        <li><strong>Sostenibilità ambientale</strong>: rispetta l’ambiente.</li>
+      </ol>
+    </section>
+
+    <section class="section">
+      <h2>Il processo di qualità</h2>
+      <p>Per rispettare queste caratteristiche, un processo di qualità deve:</p>
+      <ol>
+        <li>essere ben organizzato</li>
+        <li>evitare sprechi</li>
+        <li>evitare ripetizioni inutili</li>
+        <li>valorizzare le persone</li>
+        <li>rispettare l’ambiente</li>
+      </ol>
+      <div class="summary"><strong>Coerenza:</strong> per avere coerenza, il sistema deve essere gestito durante tutto il processo, quindi va controllato e guidato passo dopo passo.</div>
+    </section>
+
+    <section class="section">
+      <h2>La certificazione di qualità</h2>
+      <p>Per dimostrare di avere qualità, un’organizzazione deve avere una <strong>certificazione</strong>.</p>
+      <p>La certificazione è un documento ufficiale rilasciato da un <strong>ente esterno</strong> rispetto all’organizzazione. Serve a dichiarare che l’ente lavora secondo regole e standard di qualità.</p>
+      <p>Le prime norme sulla qualità sono arrivate con l’<strong>International Organization for Standardization (ISO)</strong> nel <strong>1947</strong>.</p>
+      <p>Oggi la norma più usata è la <strong>ISO 9001</strong>.</p>
+    </section>
+
+    <section class="section">
+      <h2>Gli strumenti della ISO 9001</h2>
+      <p>La ISO 9001 usa soprattutto due strumenti:</p>
+      <ol>
+        <li><strong>Audit</strong>: controlli periodici per verificare che tutto sia in ordine. Possono comprendere colloqui, verifiche e controlli sui processi. Gli audit possono essere svolti sia dal personale interno sia dall’ente esterno che rilascia la certificazione.</li>
+        <li><strong>Indicatori</strong>: dati numerici che aiutano a capire se il sistema funziona bene e come può migliorare nel tempo.</li>
+      </ol>
+      <p>Esempi di indicatori sono il numero di pazienti guariti o il numero di pazienti dimessi. Se i risultati sono diversi da quelli attesi, significa che bisogna migliorare qualcosa nel sistema.</p>
+    </section>
+
+    <h2 class="flashcards-title">Flashcard</h2>
+    <p class="legend">Tocca o clicca una card per girarla.</p>
+
+    <section class="cards">
+      <div class="flashcard" onclick="this.classList.toggle('flipped')">
+        <div class="flashcard-inner">
+          <div class="face front"><span class="tag">Flashcard 1</span><strong>Che cos’è un sistema?</strong><div class="small">Tocca per vedere la risposta</div></div>
+          <div class="face back"><strong>Risposta</strong><p>Un sistema è un insieme di parti diverse, chiamate fattori, collegate tra loro.</p></div>
+        </div>
+      </div>
+
+      <div class="flashcard" onclick="this.classList.toggle('flipped')">
+        <div class="flashcard-inner">
+          <div class="face front"><span class="tag">Flashcard 2</span><strong>Che cosa succede se un fattore non funziona?</strong><div class="small">Tocca per vedere la risposta</div></div>
+          <div class="face back"><strong>Risposta</strong><p>Se un fattore non funziona bene, tutto il sistema può avere problemi.</p></div>
+        </div>
+      </div>
+
+      <div class="flashcard" onclick="this.classList.toggle('flipped')">
+        <div class="flashcard-inner">
+          <div class="face front"><span class="tag">Flashcard 3</span><strong>Che cos’è la qualità?</strong><div class="small">Tocca per vedere la risposta</div></div>
+          <div class="face back"><strong>Risposta</strong><p>La qualità è la capacità di un sistema di soddisfare bisogni e aspettative di tutti gli attori coinvolti.</p></div>
+        </div>
+      </div>
+
+      <div class="flashcard" onclick="this.classList.toggle('flipped')">
+        <div class="flashcard-inner">
+          <div class="face front"><span class="tag">Flashcard 4</span><strong>Quali sono le 4 caratteristiche della qualità?</strong><div class="small">Tocca per vedere la risposta</div></div>
+          <div class="face back"><strong>Risposta</strong><p>Efficacia, efficienza, sostenibilità sociale e sostenibilità ambientale.</p></div>
+        </div>
+      </div>
+
+      <div class="flashcard" onclick="this.classList.toggle('flipped')">
+        <div class="flashcard-inner">
+          <div class="face front"><span class="tag">Flashcard 5</span><strong>Che cosa deve fare un processo di qualità?</strong><div class="small">Tocca per vedere la risposta</div></div>
+          <div class="face back"><strong>Risposta</strong><p>Deve essere organizzato, evitare sprechi, evitare ripetizioni inutili, valorizzare le persone e rispettare l’ambiente.</p></div>
+        </div>
+      </div>
+
+      <div class="flashcard" onclick="this.classList.toggle('flipped')">
+        <div class="flashcard-inner">
+          <div class="face front"><span class="tag">Flashcard 6</span><strong>Che cosa serve per avere coerenza?</strong><div class="small">Tocca per vedere la risposta</div></div>
+          <div class="face back"><strong>Risposta</strong><p>Il sistema deve essere gestito durante tutto il processo, passo dopo passo.</p></div>
+        </div>
+      </div>
+
+      <div class="flashcard" onclick="this.classList.toggle('flipped')">
+        <div class="flashcard-inner">
+          <div class="face front"><span class="tag">Flashcard 7</span><strong>Che cos’è la certificazione?</strong><div class="small">Tocca per vedere la risposta</div></div>
+          <div class="face back"><strong>Risposta</strong><p>È un documento ufficiale rilasciato da un ente esterno che dimostra il rispetto degli standard di qualità.</p></div>
+        </div>
+      </div>
+
+      <div class="flashcard" onclick="this.classList.toggle('flipped')">
+        <div class="flashcard-inner">
+          <div class="face front"><span class="tag">Flashcard 8</span><strong>Che cos’è la ISO 9001?</strong><div class="small">Tocca per vedere la risposta</div></div>
+          <div class="face back"><strong>Risposta</strong><p>È una delle norme più usate oggi per organizzare e controllare la qualità.</p></div>
+        </div>
+      </div>
+
+      <div class="flashcard" onclick="this.classList.toggle('flipped')">
+        <div class="flashcard-inner">
+          <div class="face front"><span class="tag">Flashcard 9</span><strong>Che cosa sono gli audit?</strong><div class="small">Tocca per vedere la risposta</div></div>
+          <div class="face back"><strong>Risposta</strong><p>Sono controlli periodici fatti per verificare che tutto sia a posto.</p></div>
+        </div>
+      </div>
+
+      <div class="flashcard" onclick="this.classList.toggle('flipped')">
+        <div class="flashcard-inner">
+          <div class="face front"><span class="tag">Flashcard 10</span><strong>Che cosa sono gli indicatori?</strong><div class="small">Tocca per vedere la risposta</div></div>
+          <div class="face back"><strong>Risposta</strong><p>Sono dati numerici che aiutano a capire se il sistema funziona bene e come migliorarlo.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <p class="footer-note">File HTML pronto all’uso: puoi aprirlo da browser, proiettarlo in classe o stamparlo in PDF.</p>
+  </div>
+</body>
+</html>
